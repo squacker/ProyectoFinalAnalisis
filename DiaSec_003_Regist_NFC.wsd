@@ -1,0 +1,25 @@
+@startuml
+
+actor Profesor
+actor Alumno
+participant "Sistema de Asistencia" as Sistema
+
+Profesor -> Sistema : Selecciona opción "Registro NFC"
+activate Sistema
+
+Sistema -> Sistema : Activa lectura NFC y espera tarjeta
+Sistema -> Alumno : Solicita presentar tarjeta
+activate Alumno
+Alumno -> Alumno : Presenta tarjeta NFC
+Alumno --> Sistema : Tarjeta presentada
+deactivate Alumno
+
+Sistema -> Sistema : Verifica validez de la tarjeta
+Sistema -> Sistema : Registra asistencia
+Sistema -> Sistema : Actualiza registro de asistencia
+
+Sistema -> Profesor : Notifica asistencia registrada
+deactivate Sistema
+Profesor --> Profesor : Continúa con otras acciones
+
+@enduml

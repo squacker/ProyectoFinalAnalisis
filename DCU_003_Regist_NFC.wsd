@@ -1,0 +1,26 @@
+@startuml CU_003: Registro de Asistencia con Tarjetas NFC
+
+!define FA_1 Tarjeta_Invalida
+!define EX_1 Fallo_en_la_Lectura_NFC
+!define EX_2 Conexion_a_Internet_Perdida
+
+actor Profesor
+actor Alumno
+
+rectangle "Registro de Asistencia con Tarjetas NFC" as Registro {
+  Profesor --> (El profesor selecciona la opción de "Registro de Asistencia con Tarjetas NFC")
+  (El profesor selecciona la opción de "Registro de Asistencia con Tarjetas NFC") --> (El sistema activa la lectura NFC y espera a que se acerque una tarjeta válida)
+  (El sistema activa la lectura NFC y espera a que se acerque una tarjeta válida) --> (El alumno presenta su tarjeta NFC al lector del sistema)
+  (El alumno presenta su tarjeta NFC al lector del sistema) --> (El sistema verifica la validez de la tarjeta y registra la asistencia del alumno)
+  (El sistema verifica la validez de la tarjeta y registra la asistencia del alumno) --> (El sistema actualiza el registro de asistencia en tiempo real)
+  (El sistema actualiza el registro de asistencia en tiempo real) --> (FA_1) : <<Flujo Alternativo>>
+  (FA_1) --> (El sistema activa la lectura NFC y espera a que se acerque una tarjeta válida)
+  (El sistema actualiza el registro de asistencia en tiempo real) --> (EX_1) : <<Flujo Alternativo>>
+  (EX_1) --> (El sistema activa la lectura NFC y espera a que se acerque una tarjeta válida)
+  (El sistema actualiza el registro de asistencia en tiempo real) --> (EX_2) : <<Flujo Alternativo>>
+  (EX_2) --> (El sistema activa la lectura NFC y espera a que se acerque una tarjeta válida)
+}
+
+Alumno --> Registro : <<Include>>
+
+@enduml

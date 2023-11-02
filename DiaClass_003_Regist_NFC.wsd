@@ -1,0 +1,27 @@
+@startuml
+
+class Profesor {
+  +registrarAsistencia(alumno: Alumno, tarjeta: TarjetaNFC)
+}
+
+class Alumno {
+  +presentarTarjeta(tarjeta: TarjetaNFC)
+}
+
+class TarjetaNFC {
+  +validar(): boolean
+}
+
+class SistemaAsistencia {
+  +activarLecturaNFC()
+  +verificarValidez(tarjeta: TarjetaNFC): boolean
+  +actualizarRegistroAsistencia()
+}
+
+Profesor -- Alumno : registraAsistencia
+Alumno -- TarjetaNFC : presentaTarjeta
+SistemaAsistencia -- TarjetaNFC : activarLecturaNFC
+SistemaAsistencia -- Alumno : verificarValidez
+SistemaAsistencia -- Alumno : actualizarRegistroAsistencia
+
+@enduml

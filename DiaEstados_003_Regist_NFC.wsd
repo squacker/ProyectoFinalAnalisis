@@ -1,0 +1,37 @@
+@startuml
+
+[*] --> Inactivo : Inicio
+
+state Inactivo {
+  [*] --> EsperandoSeleccion : Profesor selecciona opción
+  EsperandoSeleccion --> LeyendoNFC : Sistema activa lectura NFC
+  EsperandoSeleccion --> Inactivo : Cancelar selección
+}
+
+state LeyendoNFC {
+  [*] --> EsperandoTarjeta : Sistema espera tarjeta válida
+  EsperandoTarjeta --> ValidandoTarjeta : Tarjeta presentada
+  EsperandoTarjeta --> Inactivo : Cancelar lectura NFC
+}
+
+state ValidandoTarjeta {
+  [*] --> RegistrandoAsistencia : Tarjeta válida
+  ValidandoTarjeta --> TarjetaInvalida : Tarjeta inválida
+  TarjetaInvalida --> Inactivo : OK
+}
+
+state RegistrandoAsistencia {
+  [*] --> ActualizandoRegistro : Asistencia registrada
+  ActualizandoRegistro --> Inactivo : Finalizado
+}
+
+state TarjetaInvalida {
+  [*] --> Inactivo : OK
+}
+
+Inactivo --> LeyendoNFC : Continuar
+LeyendoNFC --> ValidandoTarjeta : Tarjeta válida
+ValidandoTarjeta --> RegistrandoAsistencia : Asistencia registrada
+RegistrandoAsistencia --> Inactivo : Finalizado
+
+@enduml
