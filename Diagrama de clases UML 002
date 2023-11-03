@@ -1,0 +1,48 @@
+@startuml
+
+class Alumno{
+
+-nombre: String
+-numeroCuenta: char
+-licenciatura: char
+-semestre: int
+-------------------
++ingresarPlataformaMoodle()
++enviarAsistencia()
+
+}
+
+class Profesor{
+
+-nombre: String
+-licenciatura: char
+-materia: String
+-claveDeDocente: char
+-semestre: int
+-----------------------------
++ingresarPlataformaMoodle()
++aperturarCurso()
++aperturarListaDeAsistenciaParaUnaSesion()
++guardarCambios()
++desglosarListaDeAsistenciaParaTodoElSemestre()
++guardarCambios()
++RegistrarAsistenciaDeAlumnos()
++GuardarListaDeAsistenciaDeClase()
++AlmacenarTodasLasListasDeAsistencias()
++ExportarListasDeAsistenciasComoFormatosExcel()
++ReportarListasDeAsistenciasAlUsuarioDeSistema()
+
+}
+
+class cUsuarioSistema{
+
+-nombre: String
+--------------
++darDeBajaAlumnoEnElSistema()
+
+}
+
+Profesor----Alumno
+Profesor----cUsuarioSistema
+
+@enduml
