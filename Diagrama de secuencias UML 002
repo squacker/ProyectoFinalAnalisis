@@ -1,0 +1,43 @@
+@startuml
+
+actor Docente #blue
+' The only difference between actor
+'and participant is the drawing
+participant Moodle
+
+Docente -> Moodle: AperturaCurso
+Moodle --> Docente: AbreNuevaPantalla
+Docente -> Moodle: SeleccionaActivarEdicion
+Moodle --> Docente: AbreNuevaPantalla
+Docente -> Moodle: SeleccionaAñadirActividad
+Moodle --> Docente: AbreCuadroDeOpciones
+Docente -> Moodle: SeleccionaAsistencia
+Moodle --> Docente: AbrePestañaDeOpciones
+Docente -> Moodle: SeleccionaAgregar
+Moodle --> Docente: AbreNuevaPantalla
+Docente -> Moodle: AsignaNombreAListaDeAsistencia
+Moodle --> Docente: GuardaCambiosYregresaAlCurso
+Docente -> Moodle: SeleccionaOpcionAsistencia
+Moodle --> Docente: AbreNuevaPantalla
+Docente -> Moodle: SeleccionaAñadirSesion
+Moodle --> Docente: AbreNuevaPantalla
+Docente -> Moodle: ConfiguraFechaYhoraSesion
+Moodle --> Docente: MuestraOpcionSesionesMultiples
+Docente -> Moodle: SeleccionaSesionesMultiples
+Moodle --> Docente: MuestraOpcionRepetirSesion
+Docente -> Moodle: SeleccionaRepetirSesion
+Moodle --> Docente: MuestraOpcionAñadir
+Docente -> Moodle: SeleccionaAñadir
+Moodle --> Docente: GuardaCambios
+
+actor Alumno #red
+
+Docente -> Alumno: PasaListaAsistencia
+Alumno --> Docente: RespondePresente
+
+actor UsuarioSistema #yellow
+
+Docente -> UsuarioSistema: ReportaAlumnoConFaltas
+UsuarioSistema --> Docente: LoDaDeBajaEnElSistema
+
+@enduml
