@@ -1,0 +1,44 @@
+@startuml
+
+[*] -> Estado1
+Estado1 : DocenteIngresaEnMoodle
+
+Estado1 -> Estado2
+Estado2 : DocenteAperturaCurso
+
+Estado2 --> Estado3
+Estado3 : DocenteCreaListaDeAsistencia
+
+Estado3 --> Estado4
+Estado4 : DocenteAñadePrimeraSesion
+
+Estado4 --> Estado5
+Estado5 : DocenteConfiguraHoraYFechaSesion
+
+Estado5 --> Estado6
+Estado6 : DocenteGuardaCambiosEnMoodle
+
+Estado6 --> Estado7
+Estado7 : DocenteSeleccionaraSesionesMultiples
+
+Estado7 --> Estado8
+Estado8 : RepetiraSesionesEnMismaHoraYDia
+
+Estado8 --> Estado9
+Estado9 : DocenteGuardaCambios
+
+Estado9 --> Estado10
+Estado10 : DocenteTomaAsistenciaDeLosAlumnos
+
+Estado10 --> Estado11
+Estado11 : DocenteAlmacenaListasDeAsistencias
+
+Estado11 --> Estado12
+Estado12 : ReportaAsistenciasConUsuarioDeSistemas
+
+Estado12 --> Estado13
+Estado13 : UsuarioDeSistemaDaDeBajaAlumno
+
+Estado13 --> [*]
+
+@enduml
