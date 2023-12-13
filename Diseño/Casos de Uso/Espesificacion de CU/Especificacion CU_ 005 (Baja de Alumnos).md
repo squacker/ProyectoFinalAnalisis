@@ -18,8 +18,9 @@ Profesor: Responsable de gestionar las bajas de alumnos en un grupo específico.
 1) El profesor selecciona al alumno que se dará de baja. 
 1) El sistema solicita confirmación para la baja del alumno. 
 1) El profesor confirma la baja. 
-1) El sistema muestra una notificación de que el alumno ha sido dado de baja correctamente.  **Flujos alternativos:** 
+1) El sistema muestra una notificación de que el alumno ha sido dado de baja correctamente.
 
+**Flujos alternativos:** 
 1\.  Si el profesor selecciona al alumno incorrecto a dar de baja el sistema vuelve al paso número 3. 
 
 **Postcondiciones:** 
