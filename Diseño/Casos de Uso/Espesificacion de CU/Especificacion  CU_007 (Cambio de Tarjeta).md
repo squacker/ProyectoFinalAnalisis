@@ -32,7 +32,6 @@ Alumno: Es todo aquel que posee la tarjeta de movilidad de la CDMX que cambiara 
 **Flujos alternativos:** 
 
 1) Si la información ingresada para la nueva tarjeta NFC es incorrecta o incompleta, el sistema muestra un mensaje de error y vuelve al paso número 5 para ingresar la información correctamente. 
-1) En caso de problemas de conexión durante el cambio de la tarjeta, el sistema muestra un mensaje de error y permite al profesor intentar nuevamente. 
 
    **Postcondiciones:** 
 
