@@ -33,4 +33,4 @@ Este caso de uso explica cómo es el procedimiento de registrar la asistencia de
 
 1\.La asistencia del alumno seleccionado se ha registrado correctamente en la aplicación local del profesor. 
 
-3\.El historial de asistencia del alumno seleccionado y de la clase correspondiente se ha actualizado con la última información registrada. 
+2\.El historial de asistencia del alumno seleccionado y de la clase correspondiente se ha actualizado con la última información registrada. 
