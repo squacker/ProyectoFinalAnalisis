@@ -17,15 +17,15 @@ Profesor: Es el encargado de visualizar la asistencia de los alumnos.
 
 1) El profesor abre la aplicación en su teléfono y activa la función NFC. 
 1) El profesor selecciona la opción "Reporte". 
-1) El sistema solicita la lista de asistencia registrada el mes pasado de la materia.  
-1) El profesor selecciona la lista de asistencia registrada el mes pasado. 
+1) El sistema solicita el mes, de la lista de asitencia que se desea.  
+1) El profesor selecciona el mes de la lista de asistencia . 
 1) El sistema verifica la lista de asistencia seleccionada y genera el reporte de los alumnos que están cursando la materia. 
-1) El profesor selecciona “guardar”. 
+
 
 **Flujos alternativos:** 
 
-1) En caso de que el alumno no se encuentre dado de alta en la materia, irse al CU\_ 002 
-1) En caso de que el profesor seleccione la lista de asistencia incorrecta, el sistema envía un mensaje de error y regresa al paso 4      
+1) En caso de que el alumno no se encuentre dado de alta en el grupo, irse al CU\_ 002 
+1) En caso de que el profesor seleccione la lista de asistencia incorrecta o que no exista, el sistema envía un mensaje de error y regresa al paso 3      
 
 **Postcondiciones:** 
 
