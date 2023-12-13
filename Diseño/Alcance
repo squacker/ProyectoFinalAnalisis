@@ -1,3 +1,3 @@
 Nombre del sistema: Sistema de Registro de Asistencia Mediante NFC (SIRAM_NFC)
 La app solo funciona unicamente en dispositivos con el sistema operativo Android versión 13 llamada Tiramisu⁬
-No funciona en el sistema operativo IOS
+Cuenta con Bluetooth LE audio, el cual permite gestionar el consumo de energía (batería) y conectar con varios aparatos a la vez
