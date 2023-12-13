@@ -24,8 +24,7 @@ Profesor: Responsable de gestionar las altas de alumnos en un grupo específico.
 
 **Flujos alternativos:** 
 
-1) Si la información ingresada para la creación del alumno es incorrecta, incompleta o duplicada, el sistema muestra un mensaje de error y vuelve al paso número 3 para ingresar la información correctamente. 
-1) En caso de problemas de conexión durante el alta de un alumno, el sistema muestra un mensaje de error y el sistema guarda la información de los alumnos de manera local para que en cuanto se restablezca la conexión a internet se actualice la información.  
+1) Si la información ingresada para la creación del alumno es incorrecta, incompleta o duplicada, el sistema muestra un mensaje de error y vuelve al paso número 3 para ingresar la información correctamente.   
 
    **Postcondiciones:** 
 
