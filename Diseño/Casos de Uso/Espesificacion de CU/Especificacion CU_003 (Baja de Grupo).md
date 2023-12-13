@@ -22,6 +22,7 @@ Profesor: Es el responsable de gestionar la baja de los grupos para mantener act
 8) El sistema elimina la información del grupo seleccionado, incluyendo nombre del grupo, materia, listado de alumnos y carrera. 
 8) El sistema muestra un mensaje de éxito indicando que la baja del grupo ha sido realizada con éxito. **Flujos alternativos:** 
 
+**Flujos alternativos:**
    1)  El profesor selecciona erróneamente el grupo incorrecto para dar de baja\. El sistema vuelve al paso 3 para que seleccione el grupo correcto a dar de baja\. 
 
 **Postcondiciones:** 
